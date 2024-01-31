@@ -1,2 +1,4 @@
-# vmbuild
-Repository for building virtual machines / templates with Packer and Terraform
+# Building virtual machines / templates with Packer and Terraform
+
+
+This repo is a work in progress!

@@ -1,0 +1,12 @@
+vm_template = "XXXXXXXXXXXXXXXXXXXXXXXXX"
+server_name = "z-ap-test" # leave number (e.g.- 01) out of variable
+ip_address = "XXX.XXX.XXX.XXX"
+cpu = 2
+memory = 4096
+local_admin_password = "XXXXXXXXXXXXXXXXXXXXXXXXX"
+domain_admin_password = "XXXXXXXXXXXXXXXXXXXXXXXXX"
+vsphere_user = "XXXXXXXXXXXXXXXXXXXXXXXXX"
+vsphere_password = "XXXXXXXXXXXXXXXXXXXXXXXXX"
+commands = ["Powershell.exe Get-Disk -Number 1 | Initialize-Disk -PartitionStyle GPT -PassThru | New-Partition -UseMaximumSize -DriveLetter E | Format-Volume -FileSystem NTFS -NewFileSystemLabel 'SQL Server' -AllocationUnitSize 65536 -Confirm:$false", "Powershell.exe Get-Disk -Number 2 | Initialize-Disk -PartitionStyle GPT -PassThru | New-Partition -UseMaximumSize -DriveLetter F | Format-Volume -FileSystem NTFS -NewFileSystemLabel 'SQL Server' -AllocationUnitSize 65536 -Confirm:$false;","Powershell.exe Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False"]
+disk1_size = 50
+disk2_size = 50
